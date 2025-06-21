@@ -60,7 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const options = [
   { label: "Home", path: "/" },
   { label: "Cart", path: "/cart" },
-  { label: "Login", path: "" },
+  { label: "Payment", path: "/checkout" },
 ];
 
 const ITEM_HEIGHT = 48;
@@ -130,7 +130,14 @@ export default function Navbar() {
           >
             Cart
           </Link>
-          <Typography sx={{ color: "white" }}>Login</Typography>
+          <Link
+            underline="hover"
+            color="inherit"
+            href="/checkout"
+            sx={{ color: "white" }}
+          >
+            Payment
+          </Link>
         </Breadcrumbs>
       </div>
 
