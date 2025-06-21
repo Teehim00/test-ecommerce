@@ -3,6 +3,6 @@
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/test-ecommerce.git
+git clone https://github.com/Teehim00/test-ecommerce.git
 cd test-ecommerce
 npm install
