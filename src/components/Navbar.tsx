@@ -1,4 +1,3 @@
-import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
 import { styled, alpha } from "@mui/material/styles";
@@ -60,7 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 const options = [
   { label: "Home", path: "/" },
   { label: "Cart", path: "/cart" },
-  { label: "Payment", path: "/checkout" },
+  { label: "Payment", path: "/payment" },
 ];
 
 const ITEM_HEIGHT = 48;
@@ -133,7 +132,7 @@ export default function Navbar() {
           <Link
             underline="hover"
             color="inherit"
-            href="/checkout"
+            href="/payment"
             sx={{ color: "white" }}
           >
             Payment

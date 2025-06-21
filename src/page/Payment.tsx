@@ -20,7 +20,7 @@ import ErrorModal from "../components/modals/ErrorModal";
 import SuccessModal from "../components/modals/SuccessModal";
 import { isPhoneNumberValid, isFormComplete } from "../ีutils/validateForm";
 
-export default function CheckoutPage() {
+export default function Payment() {
   const { cart } = useCart();
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");

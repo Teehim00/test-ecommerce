@@ -69,7 +69,7 @@ export default function CartPage() {
                 variant="contained"
                 color="primary"
                 sx={{ mt: 2 }}
-                href="/checkout"
+                href="/payment"
               >
                 ไปชำระเงิน
               </Button>
