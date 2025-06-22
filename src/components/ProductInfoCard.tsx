@@ -1,7 +1,6 @@
 import { Typography, CardContent, TextField, Button } from "@mui/material";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
-import { useNavigate } from "react-router-dom";
 
 type ProductInfoCardProps = {
   name: string | undefined;
@@ -18,7 +17,6 @@ export default function ProductInfoCard({
 }: ProductInfoCardProps) {
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart();
-  const navigate = useNavigate();
 
   return (
     <div>
@@ -44,6 +42,7 @@ export default function ProductInfoCard({
             onChange={(e) => setQuantity(Number(e.target.value))}
             sx={{ mt: 2, mb: 2 }}
             inputProps={{ min: 1 }}
+            className="bg-white"
           />
         </div>
 
@@ -52,7 +51,6 @@ export default function ProductInfoCard({
             variant="contained"
             onClick={() => {
               addToCart(product, quantity);
-              navigate("/cart");
             }}
           >
             เพิ่มลงตะกร้า

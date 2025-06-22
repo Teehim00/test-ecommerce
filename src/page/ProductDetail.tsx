@@ -16,27 +16,28 @@ export default function ProductDetail() {
 
   return (
     <>
-      <Navbar />
-      <div className="flex flex-col w-auto px-6 pt-10">
-        <div className="bg-gray-200/20 px-4 flex flex-col pb-10  border-white rounded-2xl">
-          <Container sx={{ mt: 4 }}>
-            <Grid container spacing={4}>
-              <Grid item xs={12} md={6}>
-                <ProductImageCard image={product.image} name={product.name} />
+      <div className="bg-gray-700 pb-10">
+        <Navbar />
+        <div className="flex flex-col w-auto px-6 pt-10">
+          <div className="mt-10 px-8 pt-10 max-w-screen-2xl mx-auto bg-amber-50 rounded-2xl pb-5">
+            <Container sx={{ mt: 4 }}>
+              <Grid container spacing={4}>
+                <Grid item xs={12} md={6}>
+                  <ProductImageCard image={product.image} name={product.name} />
+                </Grid>
+                <Grid item xs={12} md={6}>
+                  <ProductInfoCard
+                    name={product.name}
+                    description={product.description}
+                    price={product.price}
+                    product={product}
+                  />
+                </Grid>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <ProductInfoCard
-                  name={product.name}
-                  description={product.description}
-                  price={product.price}
-                  product={product}
-                />
-              </Grid>
-            </Grid>
-          </Container>
+            </Container>
+          </div>
         </div>
       </div>
-      ;
     </>
   );
 }

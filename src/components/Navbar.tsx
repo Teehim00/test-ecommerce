@@ -61,10 +61,13 @@ const options = [
   { label: "Cart", path: "/cart" },
   { label: "Payment", path: "/payment" },
 ];
-
 const ITEM_HEIGHT = 48;
 
-export default function Navbar() {
+type NavbarProps = {
+  onSearch?: (term: string) => void;
+};
+
+export default function Navbar({ onSearch }: NavbarProps) {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -90,6 +93,7 @@ export default function Navbar() {
               <StyledInputBase
                 placeholder="Search…"
                 inputProps={{ "aria-label": "search" }}
+                onChange={(e) => onSearch?.(e.target.value)}
               />
             </Search>
           </Toolbar>
